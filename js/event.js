@@ -1,26 +1,6 @@
 $(document).ready(function(){
 
 //<- - - - - - - 이벤트 정리 - - - - - - ->//
-let ww=$(window).innerWidth();
-let wh=$(window).innerHeight();
-
-//<- - - resize 함수영역 - - ->
-// layout_pc()
-// layout_tab()
-// layout_mo()
-
-// $(window).resize(function(){
-//     if(ww>=1024){
-//         layout_pc();
-//         $('.page_wrap').css({
-//             left: 0
-//         })
-//     }else if(ww>=768 && ww<1024){
-//         layout_tab();
-//     }else{
-//         layout_mo();
-//     }
-// })
 
 //Pc,Tab, Mobile 이벤트
 //A. main_page : run_icon변경(setinterval-attr)

@@ -92,7 +92,6 @@ $(document).ready(function(){
         })
         // resize : button_con 길이 유지
         let moveTop=$('.move_page').position().top;
-        console.log(moveTop)
         if(moveTop==0){
             moveIndex(0)
         }else if(moveTop==-wh){
@@ -234,9 +233,8 @@ $(document).ready(function(){
     }//lay_out함수의 끝
 
 //PC에서만 발생하는 이벤트
-let windowWidth=$(window).width();
 
-if(windowWidth>=1024){
+if(ww>=1024){
     //A. run_wrap ▶ 달리기img(0~45)
     let a=0;
     setInterval(function(){

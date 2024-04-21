@@ -1,7 +1,4 @@
 $(document).ready(function(){
-
-    let ww=$(window).innerWidth();
-    let wh=$(window).innerHeight();
     
 //<- - - resize 함수영역 - - ->
     layout_mo();
@@ -179,8 +176,8 @@ $(document).ready(function(){
             width: '86%',
             marginLeft: '7%',
             height: 0.35*wh,
-            marginTop: 0.01*wh,
-            marginBottom: 0.01*wh,
+            marginTop: 0.02*wh,
+            marginBottom: 0.02*wh,
             borderRadius: '20px',
             // backgroundColor: "red"
         })
