@@ -1,9 +1,13 @@
 $(document).ready(function(){
+    
+    let ww=$(window).innerWidth();
+    let wh=$(window).innerHeight();
 
 //<- - - resize 함수영역 - - ->
+
     layout_tab();
     $(window).resize(function(){
-        layout_tab();
+            layout_tab();
     })
 
 //<함수> tab resize --//

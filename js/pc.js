@@ -4,13 +4,12 @@ $(document).ready(function(){
     let ww=$(window).innerWidth();
     let wh=$(window).innerHeight();
 
-
     //<- - - resize 함수영역 - - ->
     layout_pc()
     $(window).resize(function(){
-        layout_pc();
-        $('.page_wrap').css({
-            left: 0
+            layout_pc();
+            $('.page_wrap').css({
+                left: 0
         })
     })
 

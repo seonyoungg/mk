@@ -1,9 +1,12 @@
 $(document).ready(function(){
 
+    let ww=$(window).innerWidth();
+    let wh=$(window).innerHeight();
+    
 //<- - - resize 함수영역 - - ->
     layout_mo();
     $(window).resize(function(){
-        layout_mo();
+            layout_mo();
     })
 
 //<함수> layout_mobile
