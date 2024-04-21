@@ -1,0 +1,39 @@
+/*---전체 초기화 작업---*/
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#333;
+}
+
+/*---폰트스타일 지정---*/
+html{
+    font-family: 'NanumSquareAcr';
+}
+body{
+    overflow: hidden;
+}
+.point_text,.main_text,.top_text{
+    font-family: 'NanumSquareAcb';
+}
+
+/*display 관련*/
+
+/*swiper input태그 전체 숨김처리*/
+.swiper input{
+    display: none;
+}
+/*pc버전 hide_con 숨김*/
+.hide_con{
+    display: none;
+}
