@@ -133,7 +133,7 @@
         height: 100%;
         object-fit: contain;
         transition: 0.5s;
-        cursor: url(../img/cursor2.png)1 12,auto;
+        cursor: url(../img/cursor2.png)1 8,auto;
     }
     .swiper-slide img:hover{
         transform: scale(1.1);

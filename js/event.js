@@ -73,7 +73,6 @@ if(windowWidth<1024){
         $(window).scroll(function(){
         let s_top=$(this).scrollTop();
         let pageIndex=0;
-        console.log(s_top);
         if(s_top>=0 && s_top<wh){
             pageIndex=0;
             }else if(s_top>=wh && s_top<wh*2){

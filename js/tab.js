@@ -182,7 +182,6 @@ $(document).ready(function(){
             backgroundColor: "green"
         })
         let swiper_ww=$('.swiper_wrap').width()
-        let swiper_wh=$('.swiper_wrap').height()
         $('.swiper_button').css({
             width: '100%',
             height: 0.15*wh,
@@ -229,19 +228,19 @@ $(document).ready(function(){
             width: 0.8*ww,
             height: 0.8*wh,
             margin: '0 auto',
-            backgroundColor: 'white'
+            // backgroundColor: 'white'
         })
         $('.call_box').css({
             width: 0.8*ww,
             height: 0.4*wh,
-            backgroundColor: 'red'
+            // backgroundColor: 'red'
         })
         let call_ww=$('.call_box').width()
         let call_wh=$('.call_box').height()
         $('.call_box div').css({
             width: call_ww*0.4,
             height: call_ww*0.4,
-            backgroundColor: 'hotpink',
+            // backgroundColor: 'hotpink',
         })
     }
     }//lay_out함수의 끝

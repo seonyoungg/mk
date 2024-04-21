@@ -25,7 +25,7 @@ $(document).ready(function(){
             width: ww,
             height: wh,
             zIndex: 999,
-            // display: 'none' 
+            display: 'none' 
         })
         $('.main_page>img').css({
             width: ww,
@@ -49,7 +49,7 @@ $(document).ready(function(){
             height: wh*3,
             zIndex: 99,
             position: 'relative',
-            display: 'none'
+            // display: 'none'
         })
         //1) 메뉴박스(button_box)
         $('.button_box').css({
@@ -136,6 +136,9 @@ $(document).ready(function(){
             height: 0.35*r_wh,
             // backgroundColor: 'pink'
         })
+        $('.skill_img').css({
+            marginTop: 0.02*r_wh 
+        })
         //----------(B)page_2 : 프로젝트 영역
         $('.project_text').css({
             width: '100%',
@@ -179,7 +182,6 @@ $(document).ready(function(){
             // backgroundColor: "red"
         })
         let swiper_ww=$('.swiper_wrap').width()
-        let swiper_wh=$('.swiper').height()
         $('.swiper_button').css({
             width: '100%',
             height: 0.15*wh,
@@ -213,7 +215,7 @@ $(document).ready(function(){
         $('.pj_con').css({
             width: '90%',
             marginLeft: '5%',
-            // backgroundColor: 'white'
+            backgroundColor: 'white'
         })
         $('.pj_text').eq(0).css({
             display: 'block'
@@ -226,16 +228,16 @@ $(document).ready(function(){
             width: 0.8*ww,
             height: 0.8*wh,
             margin: '0 auto',
-            // backgroundColor: 'white'
+            backgroundColor: 'white'
         })
         $('.call_box').css({
-            width: '100%',
+            width: 0.8*ww,
             height: 0.4*wh,
             // backgroundColor: 'red'
         })
         let call_ww=$('.call_box').width()
         let call_wh=$('.call_box').height()
-        $('.call_box>div').css({
+        $('.call_box div').css({
             width: call_ww*0.4,
             height: call_ww*0.4,
             // backgroundColor: 'hotpink',
