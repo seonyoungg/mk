@@ -27,7 +27,7 @@ $(document).ready(function(){
         })
         //-----1.run_wrap-----//
         $('.run_wrap').css({
-            // display: 'none',
+            display: 'none',
             left:0, //main_page내 버튼 클릭과 동시에 left:-ww
             zIndex: 999
         })
