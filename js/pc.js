@@ -5,9 +5,7 @@ $(document).ready(function(){
     let wh=$(window).innerHeight();
 
 
-
-    //<resize함수영역>
-    
+    //<- - - resize 함수영역 - - ->
     layout_pc()
     $(window).resize(function(){
         layout_pc();
@@ -16,7 +14,7 @@ $(document).ready(function(){
         })
     })
 
-    //--pc resize --//
+    //<함수> pc resize --//
     function layout_pc(){
         ww=$(window).innerWidth();
         wh=$(window).innerHeight();
@@ -86,13 +84,39 @@ $(document).ready(function(){
         $('.button_con').css({
             lineHeight: but_h+'px'
         })
-        // (resize)mo>pc icon변경필요
+        // resize : mo>pc icon변경필요
         let butIcon=["./img/1.png","./img/2.png","./img/3.png","./img/4.png"]
         $('.button_con>img').attr({
             src : function(abc){
                 return butIcon[abc]
             }
         })
+        // resize : button_con 길이 유지
+        let moveTop=$('.move_page').position().top;
+        console.log(moveTop)
+        if(moveTop==0){
+            moveIndex(0)
+        }else if(moveTop==-wh){
+            moveIndex(1)
+        }else if(moveTop==-wh*2){
+            moveIndex(2)
+        }
+        function moveIndex(moveICon){
+            $('.button_con').css({ 
+                width: 0.02*ww,
+                border:'2px solid transparent',
+                backgroundImage:'linear-gradient(#fff, #fff), linear-gradient(45deg,#dd5875,#f39b00,#75bd4d,#059ee2)',
+                backgroundOrigin:'border-box',
+                backgroundClip:'padding-box, border-box'
+            });
+            $('.button_con').eq(moveICon).css({
+                width: 0.06*ww,
+                backgroundImage: 'linear-gradient(45deg,#dd5875,#f39b00,#75bd4d,#059ee2)', 
+                backgroundOrigin:'border-box',
+                backgroundClip:'',
+                color:'#fff'
+            })
+        }
         //------------------------------------------------//
         //2). move_page
         $('.move_page').css({
@@ -174,7 +198,8 @@ $(document).ready(function(){
             width: 0.7*ww,
             height: 0.6*wh
         })
-                //pc swiper img삽입
+        
+        //pc swiper img삽입
                 // let port=["./img/a1b.png","./img/a2b.png","./img/a3b.png","./img/a4b.png","./img/a5b.png"]
                 // $('.swiper-slide img').attr({
                 //     src: function(img){
@@ -182,7 +207,6 @@ $(document).ready(function(){
                 //     }
                 //     })    
                 //흑백-컬러 hover시 무한반복 루트 설정시 오류발생
-
         let color_port=["./img/a1.png","./img/a2.png","./img/a3.png","./img/a4.png","./img/a5.png"]
         $('.swiper-slide img').attr({
             src: function(index_abc){
@@ -207,54 +231,7 @@ $(document).ready(function(){
         $('.call_box>div').css({
             width: contact_ww*0.2
         })
-
-        let sct=$(window).scrollTop();
-        console.log(sct)
-        if(sct>=0 && sct<wh){
-            resizeButton(0)
-        }else if(sct>=wh && sct<wh*2){
-            resizeButton(1)
-        }else if(sct>=wh*2 && sct<wh*3){
-            resizeButton(2)
-        }
-        function resizeButton(reIndex){
-            $('.button_con').eq(reIndex).css({ 
-                width: 0.06*ww,
-                border:'2px solid transparent',
-                backgroundImage:'linear-gradient(#fff, #fff), linear-gradient(45deg,#dd5875,#f39b00,#75bd4d,#059ee2)',
-                backgroundOrigin:'border-box',
-                backgroundClip:'padding-box, border-box'
-            });
-        }
-
-        //resize시 button_con 길이 유지
-        let moveTop=$('.move_page').position().top;
-        console.log(moveTop)
-        if(moveTop==0){
-            moveIndex(0)
-        }else if(moveTop==-wh){
-            moveIndex(1)
-        }else if(moveTop==-wh*2){
-            moveIndex(2)
-        }
-        function moveIndex(aaa){
-            $('.button_con').css({ 
-                width: 0.02*ww,
-                border:'2px solid transparent',
-                backgroundImage:'linear-gradient(#fff, #fff), linear-gradient(45deg,#dd5875,#f39b00,#75bd4d,#059ee2)',
-                backgroundOrigin:'border-box',
-                backgroundClip:'padding-box, border-box'
-            });
-            $('.button_con').eq(aaa).css({
-                width: 0.06*ww,
-                backgroundImage: 'linear-gradient(45deg,#dd5875,#f39b00,#75bd4d,#059ee2)', 
-                backgroundOrigin:'border-box',
-                backgroundClip:'',
-                color:'#fff'
-            })
-        }
-    }
-
+    }//ww>=1024조건 끝
     }//lay_out함수의 끝
 
 //PC에서만 발생하는 이벤트
@@ -460,13 +437,13 @@ if(windowWidth>=1024){
         $('.page_wrap').on('mousewheel',function(event,delta){
             movewheel(delta);
         })
+        box_index=1;
         scrollBut(1); 
         $('.move_page').animate({
             top: -wh
         },1000) 
     })
     // top_page 연결해제- - ->
-
 
     // H. swiper_wrap img변경(hover)
     // let port=["./img/a1b.png","./img/a2b.png","./img/a3b.png","./img/a4b.png","./img/a5b.png"]

@@ -1,44 +1,48 @@
 @media all and (max-width:767px){
-/*mobile css*/
-html,body{
+/*-----tab 기본폰트 사이즈 12px -----*/
+html{
     font-size: 12px;
+}
+body{
     overflow-y: auto;
 }
-
-/*1. run_wrap : 구현X*/
-/*2. main_page*/
-.main_page,.page_wrap{
-    width: 100vw;
+/*-----전체 페이지 스타일 지정-----*/
+.page_wrap{
+    background-color: white;
+    position: relative;
 }
-.main_text,.click_box{
-    text-align: center;
-    position: absolute;
-    left: 50%;
-}
-.main_page>img{
-    top:0;
-}
-.main_text{
-    top: 60vh;
-    margin-bottom: 3vh;
-}
-.click_box{
-    top: 60vh;
-    border-radius: 30px;
-}
-
-/*3. page_wrap(button_box/move_page)*/
-/*3-1. button_box*/
-.button_box{
+.main_page{
     background-color: white;
     position: fixed;
-    left: 0;
-    bottom: 0;
+    overflow: hidden;
+}
+/*-----1.run_wrap : tab버전부터 X-----*/
+
+/*-----2. main_page-----*/
+.main_text,.click_box{
+    text-align: center;
+}
+.main_text{
+    font-size: 5rem;
+    margin: 0 auto;
+}
+.click_box{
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 40px;
+    margin: 0 auto;
+}
+/*-----3.page_wrap-----(button_box/move_page)*/
+/*1) 메뉴박스(button_box)*/
+.button_box{
+    background-color: white;
+    box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    z-index: 9999;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
 }
 .hide_text{
     display: none;
@@ -46,7 +50,7 @@ html,body{
 .button_con>img{
     transform: scale(0.6);
 }
-/*3-2. move_page*/
+/*2) move_page*/
 .move_page{
     position: absolute;
     left:0;
@@ -56,10 +60,9 @@ html,body{
     box-sizing: border-box;
     position: relative;
 }
-/*3-2.(A)page_1 : 자기소개 영역*/
+/*----------(A)page_1 : 자기소개 영역*/
 .name_box{
     text-align: center;
-    /* background-color: red; */
 }
 .point_text{
     font-size: 3rem;
@@ -77,9 +80,6 @@ html,body{
     padding-left: 10px;
     box-sizing: border-box;
 }
-/* .right_con>div{
-    border: 1px solid black;
-} */
 .con_box p{
     margin-top: 10px;
     padding-left: 15px;
@@ -88,23 +88,23 @@ html,body{
 .skill_img{
     width: 100%;
     overflow: hidden;
-    /* background-color: #75bd4d; */
     padding: 0 10%;
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    /* background-color: red; */
 }
 .skill_img>img{
     width: 14vw;
     height: 14vw;
 }
-/*3-2.(B)page_2 : 프로젝트 영역*/
+/*----------(B)page_2 : 프로젝트 영역*/
+.project_text{
+    text-align: center;
+}
 .pj_text{
     font-size: 2rem;
-    text-align: center;
 }
 .pj_text p{
     font-size: 1.5rem
@@ -116,8 +116,6 @@ html,body{
 /*Swiper plug-In*/
 .swiper_wrap{
     position: relative;
-    display: flex;
-    flex-direction: column;
 }
 .swiper-slide img{
     display: block;
@@ -131,12 +129,15 @@ html,body{
 .hide_con{
     display: block;
 }
-/*3-2.(C)page_3 : contact 영역*/
+/*----------(C)page_3 : contact 영역*/
+.close_but{
+    display: none;
+}
 .top_page{
     text-align: center;
 }
-.close_but{
-    display: none;
+.contact_box .point_text{
+    font-size: 4rem
 }
 .call_box{  
     display: flex;

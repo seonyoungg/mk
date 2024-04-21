@@ -38,11 +38,15 @@ $(document).ready(function(){
 //Tab, Mobile 이벤트
 let windowWidth=$(window).width();
 if(windowWidth<1024){
+    ww=$(window).innerWidth();
+    wh=ww*2;
     //B. main_page>click_box 이벤트 실행
     $('.click_box').click(function(){
         $('.main_page').fadeOut(2000)
+        $('.page_wrap').css({
+            display: 'block'
+        })
     })
-
     //B-2. button_con(click)
     $('.button_con').click(function(){
         let button_index=$(this).index();
@@ -50,13 +54,20 @@ if(windowWidth<1024){
             $('html,body').animate({
                 scrollTop: wh*button_index
             },1000)
+            imgChange(button_index);
+        }else if(button_index=3){
+            $('.main_page').fadeIn(500)
+            $('html,body').animate({
+                scrollTop: 0
+            },1000)
+            $('.page_wrap').css({
+                display: 'none'
+            })
         }
-        imgChange(button_index);
     })
-
-    $(window).scroll(function(){
-        imgAttr();
-    });
+    // $(window).scroll(function(){
+    //     imgAttr();
+    // });
 
     //B-3. scroll 위치값에 따른 button_con 변경
         $(window).scroll(function(){
