@@ -63,8 +63,8 @@ $(document).ready(function(){
         //-----3.page_wrap-----//1) button_box 2)move_page>page1-3
         $('.page_wrap').css({
             // pc버전 디자인 작업 때 확인하기 위해 임시로 left:0
-            left:0,
-            // left:ww,
+            // left:0,
+            left:ww,
             zIndex: 99,
             overflow:'hidden'
         })

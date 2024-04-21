@@ -22,9 +22,9 @@
         transition: 5s;
     }
                                     /* PC작업편집시 */
-                                    .run_wrap,.main_page{
+                                    /* .run_wrap,.main_page{
                                         display: none;
-                                    }
+                                    } */
     /*-----2. main_page-----*/
     .main_text,.click_box{
         text-align: center;

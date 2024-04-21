@@ -25,7 +25,7 @@ $(document).ready(function(){
             width: ww,
             height: wh,
             zIndex: 999,
-            display: 'none' 
+            // display: 'none' 
         })
         $('.main_page>img').css({
             width: ww,
@@ -49,7 +49,7 @@ $(document).ready(function(){
             height: wh*3,
             zIndex: 99,
             position: 'relative',
-            // display: 'none'
+            display: 'none'
         })
         //1) 메뉴박스(button_box)
         $('.button_box').css({
