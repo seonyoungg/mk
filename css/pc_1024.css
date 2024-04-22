@@ -1,10 +1,12 @@
 @media all and (min-width:1024px){
     
     /*-----pc 기본폰트 사이즈 16px -----*/
-    body{
+    html,body{
         font-size: 16px;
     }
-
+    .invisible-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
     /* 페이지 구성 순서(run_wrap-main_page_page_wrap)
         main_page 버튼 클릭
         run-wrap : 좌측(left:-ww)에서 메인페이지(left:0)로 이동
@@ -133,7 +135,7 @@
         height: 100%;
         object-fit: contain;
         transition: 0.5s;
-        cursor: url(../img/cursor2.png)1 8,auto;
+        cursor: url(../img/cursor.png)1 8,auto;
     }
     .swiper-slide img:hover{
         transform: scale(1.1);
@@ -173,15 +175,12 @@
         right:25px;
         cursor: pointer
     }
-    .close_but:hover{
-        background-image: linear-gradient(-45deg,#dd5875,#f39b00,#75bd4d,#059ee2);
-    }
     .call_box{  
-        width: 90%;
-        height: 50%;
-        margin: 0 auto;
         display: flex;
         justify-content: space-evenly;
+    }
+    .close_but:hover{
+        background-image: linear-gradient(-45deg,#dd5875,#f39b00,#75bd4d,#059ee2);
     }
     .call_box>div{
         height: 100%;

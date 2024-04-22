@@ -4,8 +4,14 @@ $(document).ready(function(){
     layout_mo();
     $(window).resize(function(){
             layout_mo();
+            $('.page_wrap').css({
+                display: 'block',
+                left: 0
+            })
+            $('.img_hide').css({
+                display:'block'
+            })
     })
-
 //<함수> layout_mobile
     function layout_mo(){
         ww=$(window).innerWidth();
@@ -59,12 +65,17 @@ $(document).ready(function(){
             paddingRight: 0.1*ww,
             boxSizing: 'border-box',
             left:0,
-            bottom:0
+            top: 'calc(100vh - ' + 0.1*wh + 'px)'
         })
         $('.button_con').css({
             width: 0.1*ww,
             height: 0.1*ww,
-            cursor:'pointer'
+            cursor:'pointer',
+            border: '',
+            backgroundImage:'linear-gradient(#fff, #fff)'
+        })
+        $('.img_hide').css({
+            display:'block'
         })
         let butIcon=["./img/p_icon_1.png","./img/p_icon_2.png","./img/p_icon_3.png","./img/p_icon_4.png"]
         $('.button_con>img').attr({
@@ -86,7 +97,7 @@ $(document).ready(function(){
             // backgroundColor:"red"
         })
         $('.page_2').css({
-            paddingTop: 0.05*wh,
+            paddingTop: 0.1*wh,
             // backgroundColor:"purple"
         })
         $('.page_3').css({
@@ -127,12 +138,20 @@ $(document).ready(function(){
             // backgroundColor: 'red'
         })
         $('.birth_box,.certi_box').css({
-            width: 0.5*r_ww,
+            width: 0.45*r_ww,
             height: 0.4*r_wh,
             // backgroundColor: 'blue',
         })
+        $('.birth_box').css({
+            marginLeft:0.05*r_ww,
+        })
+        $('.certi_box').css({
+            marginRight:0.05*r_ww,
+        })
         $('.skill_box').css({
-            width: con_ww,
+            marginLeft:0.05*r_ww,
+            marginRight:0.05*r_ww,
+            width: 0.95*r_ww,
             height: 0.35*r_wh,
             // backgroundColor: 'pink'
         })
@@ -140,46 +159,46 @@ $(document).ready(function(){
             marginTop: 0.02*r_wh 
         })
         //----------(B)page_2 : 프로젝트 영역
-        $('.project_text').css({
-            width: '100%',
-            height: 0.05*wh,
-            // backgroundColor: 'blue',
-            position:'relative'
-        })
         $('.swiper_wrap').css({
             width: 0.8*ww,
             height: 0.8*wh,
             margin: '0 auto',
-            // backgroundColor: 'darkgrey',
-            paddingLeft: '5%',
-            paddingRight: '5%',
-            boxSizing: 'borderBox'
-        })   
+            backgroundColor: 'red'
+        }) 
+        $('.swiper').css({
+            width: 0.6*ww,
+            height: 0.45*wh,
+            margin: '0 auto',
+            backgroundColor: 'yellow'
+        })
         $('.swiper-wrapper,.swiper-slide').css({
             width: '100%',
             height: '100%'
-        })     
+        })
+        $('.pj_text').css({
+            width: '100%',
+            height: 0.05*wh,
+            backgroundColor: 'blue'
+        })   
         let port=["./img/mo1.jpg","./img/mo2.jpg","./img/mo3.jpg","./img/mo4.jpg","./img/mo5.jpg"]
         $('.swiper-slide img').attr({
             src: function(def){
                 return port[def]
             }
-            })
-        $('.con_text').css({
+        })
+        $('.swiper-slide>img').css({
+            width: '80%',
+            height: 0.24*wh,
+            borderRadius: '20px',
+            marginTop:0.025*wh,
+            marginBottom:0.025*wh,
+            backgroundColor: 'green',
+            marginLeft: '10%'
+        })
+        $('.pj_con').css({
             width: '100%',
             height: 0.05*wh,
-            // backgroundColor: 'blue',
-            position:'relative',
-            marginBottom: 0.01*wh
-        })
-        $('.swiper').css({
-            width: '86%',
-            marginLeft: '7%',
-            height: 0.35*wh,
-            marginTop: 0.02*wh,
-            marginBottom: 0.02*wh,
-            borderRadius: '20px',
-            // backgroundColor: "red"
+            backgroundColor: 'blue'
         })
         let swiper_ww=$('.swiper_wrap').width()
         $('.swiper_button').css({
@@ -193,7 +212,7 @@ $(document).ready(function(){
             float: 'left',
             cursor: 'pointer',
             // border: '1px solid black',
-            boxSizing: 'border-box',
+            // boxSizing: 'border-box'
         })
         $('.left_but').css({
             marginLeft: swiper_ww*0.05
@@ -201,34 +220,18 @@ $(document).ready(function(){
         $('.right_but').css({
             marginRight: swiper_ww*0.05
         })
-        $('.pj_text,.pj_con').css({
-            display: 'none'
-        })
-        $('.con_text').css({
-            width: '100%',
-            height: 0.1*wh,
-            marginTop: 0.03*wh,
-            marginBottom: 0.01*wh,
-            // backgroundColor: 'skyblue',
-            position:'relative'
-        })
-        $('.pj_con').css({
-            width: '90%',
-            marginLeft: '5%',
-            backgroundColor: 'white'
-        })
-        $('.pj_text').eq(0).css({
-            display: 'block'
-        })
-        $('.pj_con').eq(0).css({
-            display: 'block'
-        })
         //----------(C)page_3 : 콘텍트 영역
         $('.contact_box').css({
             width: 0.8*ww,
-            height: 0.8*wh,
+            height: 0.5*wh,
             margin: '0 auto',
-            backgroundColor: 'white'
+            // backgroundColor: 'skyblue',
+            padding: 0
+        })
+        $('.contact_box>.point_text').css({
+            width: 0.8*ww,
+            height: 0.1*wh,
+            lineHeight: 0.1*wh+'px'
         })
         $('.call_box').css({
             width: 0.8*ww,
@@ -240,14 +243,16 @@ $(document).ready(function(){
         $('.call_box div').css({
             width: call_ww*0.4,
             height: call_ww*0.4,
+            padding: 0
             // backgroundColor: 'hotpink',
         })
         } 
+        $('.copyright_box').css({
+            width: 0.8*ww,
+            height: 0.1*wh,
+            margin: '0 auto',
+            marginTop: 0.025*wh
+        })
     }
     //lay_out함수의 끝
-
-    
-    //<- - - - - 모바일 이벤트영역- - - - ->
-
-
 })
