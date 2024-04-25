@@ -1,4 +1,3 @@
-/*---전체 초기화 작업---*/
 *{
     margin: 0;
     padding: 0;
@@ -12,31 +11,123 @@ ul,li{
     list-style: none;
 }
 a{
-    text-decoration: none;
-    color:#333;
+    color: #333;
+    font-style: none;
 }
+
+/*--test--*/
+/* .main_page,.run_wrap{
+    display: none;
+} */
 
 /*---폰트스타일 지정---*/
 html{
     font-family: 'NanumSquareAcr';
 }
-body{
-    overflow: hidden;
-}
 .point_text,.main_text,.top_text{
     font-family: 'NanumSquareAcb';
 }
 
-/*display 관련*/
-
-/*swiper input태그 전체 숨김처리*/
+/*---공통스타일---*/
+.info_text{
+    position: fixed;
+    right: 10px;
+    top:10px;
+    z-index:9999999
+}
+.info{
+    display: none;
+    font-size: 0.8rem;
+}
+.run_wrap,.main_page,.page_wrap{
+    background-color: #fff;
+}
+.left_con,.right_con{
+    float :left;
+}
 .swiper input{
     display: none;
 }
-/*pc버전 hide_con 숨김*/
-.hide_con{
-    display: none;
+.contact_box,.copyright_box{
+    text-align: center;
 }
-.copyright_box{
-    display: none;
+
+/*page배경색구분*/
+.run_wrap{
+    background-color: pink;
+}
+.main_page{
+    background-color: lemonchiffon;
+}
+.page_wrap{
+    background-color: skyblue;
+}
+.page_1{
+    background-color: lightcoral;
+}
+.con_wrap{
+    background-color: lightseagreen;
+}
+.left_con{
+    background-color: brown;
+}
+.right_con{
+    background-color: darkorange;
+}
+.name_box{
+    background-color: lightgoldenrodyellow;
+}
+.skill_box{
+    background-color: aqua;
+}
+.skill_img{
+    background-color: #333;
+}
+.certi_box{
+    background-color: yellow;
+}
+.birth_box{
+    background-color: burlywood;
+}
+.page_2{
+    background-color: plum;
+}
+.swiper_wrap{
+    background-color: aqua;
+}
+.swiper-slide{
+    background-color: blue;
+}
+.pj_text{
+    background-color: lightpink;
+}
+.swiper-slide img{
+    background-color: greenyellow;
+}
+.pj_con{
+    background-color: violet;
+}
+.swiper_button{
+    background-color: darkkhaki;
+}
+.but_con{
+    background-color: tomato;
+}
+.page_3{
+    background-color: aqua;
+}
+.contact_box{
+    background-color: teal;
+}
+.close_but{
+    background-color: steelblue;
+}
+.point_text{
+    background-color: slateblue;
+}
+.call_box{
+    background-color: brown;
+}
+.in_page{
+    background-color: darkolivegreen;
 }

@@ -3,283 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>수정해보자🐥</title>
-    <style>
-    </style>
+    <title>템플릿변경tab</title>    
     <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="./css/common.css" rel="stylesheet" type="text/css">
-    <link href="./css/pc_1024.css" rel="stylesheet" type="text/css">
-    <link href="./css/tab_768_1023.css" rel="stylesheet" type="text/css">
-    <link href="./css/mo_767.css" rel="stylesheet" type="text/css">
+    <link href="./css/pc.css" rel="stylesheet" type="text/css">
+    <link href="./css/tab.css" rel="stylesheet" type="text/css">
+    <link href="./css/mo.css" rel="stylesheet" type="text/css">
     <script src="./js/jquery-3.7.1.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/jquery.mousewheel.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/pc.js"></script>
-    <script src="./js/tab.js"></script>
-    <script src="./js/mobile.js"></script>
-    <script src="./js/event.js"></script> 
+    <script src="./js/layout.js"></script>
+    <script src="./js/event.js"></script>
 </head>
-<body> 
+<body>
     <!-- 페이지 구성 순서(run_wrap-main_page_page_wrap)
-        // main_page 버튼 클릭
-        // run-wrap : 좌측(left:-ww)에서 메인페이지(left:0)로 이동
-        // page_wrap : 우측(left:ww)에서 메인페이지(left:0)로 이동  */ -->
-
-    <!-- PC 전용 : main_page의 버튼 클릭 시 나타나는 뛰는 이미지-->
+    // main_page 버튼 클릭
+    // run_wrap : 좌측(left:-ww)에서 메인페이지(left:0)로 이동
+    // page_wrap : 우측(left:ww)에서 메인페이지(left:0)로 이동  */ -->
     <div class="run_wrap">
         <img src="./img/run_img/45.jpg" alt="">
     </div>
-    <!-- 초기화면---->
     <div class="main_page">
+        <div class="in_page in_page_1">
         <img src="./img/run_icon2/1.png" alt="">
         <h2 class="main_text">Are You Ready?</h2>
         <div class="click_box">START</div>
+        </div>
     </div>
-    <!----상세화면---->
     <div class="page_wrap">
-        <!--페이지 이동 버튼-->
-        <div class="button_box">
-            <div class="button_con">
-                <img class="img_hide" src="./img/1.png" alt="">
-                <span class="hide_text">PROFILE</span>
+        <div class="info_text">
+            <p class="info info_1">현재 화면은 PC환경에 최적화되어있습니다.</p>
+            <p class="info info_2">현재 화면은 TAB환경에 최적화되어있습니다.</p>
+            <p class="info info_3">현재 화면은 MOBILE환경에 최적화되어있습니다.</p>
+        </div>
+        <!--페이지 이동버튼-->
+        <div class="pc_button">
+            <div class="pc_but">
+                <img class="pc_img" src="./img/pc1.png" alt="">
+                <span class="pc_text">PROFILE</span>
             </div>
-            <div class="button_con">
-                <img class="img_hide" src="./img/2.png" alt="">
-                <span class="hide_text">PROJECT</span>
+            <div class="pc_but">
+                <img class="pc_img" src="./img/pc2.png" alt="">
+                <span class="pc_text">PROJECT</span>
             </div>
-            <div class="button_con">
-                <img class="img_hide" src="./img/3.png" alt="">
-                <span class="hide_text">CONTACT</span>
+            <div class="pc_but">
+                <img class="pc_img" src="./img/pc3.png" alt="">
+                <span class="pc_text">CONTACT</span>
             </div>
-            <div class="button_con">
-                <img class="img_hide" src="./img/4.png" alt="">
-                <span class="hide_text">HOME</span>
+            <div class="pc_but">
+                <img class="pc_img" src="./img/pc4.png" alt="">
+                <span class="pc_text">MAIN</span>
             </div>
         </div>
-        <!--상세 페이지-->
-        <div class="move_page">
-            <div class="page page_1">
-                <div class="con_wrap">
-                    <div class="left_con">
-                    <img src="./img/main_run.png" alt="#">
+        <div class="tm_button hide_pc">
+            <div class="tm_but">
+                <img class="tm_img" src="./img/mo1.png" alt="">
+            </div>
+            <div class="tm_but">
+                <img class="tm_img" src="./img/mo2.png" alt="">
+            </div>
+            <div class="tm_but">
+                <img class="tm_img" src="./img/mo3.png" alt="">
+            </div>
+            <div class="tm_but">
+                <img class="tm_img" src="./img/mo4.png" alt="">
+            </div>
+        </div>
+        <!--내용 페이지-->
+        <div class="page page_1">
+            <div class="in_page con_wrap">
+                <div class="left_con">
+                <img src="./img/main_run.png" alt="#">
+                </div>
+                <div class="right_con">
+                    <div class="con_box name_box">
+                        <h1 class="point_text">박선영 
+                            <span>P<span class="sub_text">ark</span> S<span class="sub_text">eon</span>Y<span class="sub_text">oung</span></span></h1>
                     </div>
-                    <div class="right_con">
-                        <div class="con_box name_box">
-                            <h1 class="point_text">박선영 
-                                <span>P<span  class="sub_text">ark</span> S<span class="sub_text">eon</span>Y<span class="sub_text">oung</span></span></h1>
-                        </div>
-                        <div class="con_box birth_box">
-                            <h2 class="top_text">ABOUT ME</h2>
-                            <P>1994. 11. 11(+)</P>
-                            <P>seon.xero@gmail.com</P>
-                        </div>
-                        <div class="con_box certi_box">
-                            <h2 class="top_text">CERTIFICATE</h2>
-                            <p>웹디자인기능사</p>
-                            <p>컴퓨터그래픽스운용기능사</p>
-                            <p>컴퓨터활용능력 1급</p>
-                            <p>자동차운전면허 2종보통</p>
-                        </div>
-                        <div class="con_box skill_box">
-                            <h2 class="top_text">SKILL</h2>
-                            <div class="skill_img">
-                                <img src="./img/skill_1.png" alt="">
-                                <img src="./img/skill_2.png" alt="">
-                                <img src="./img/skill_3.png" alt="">
-                                <img src="./img/skill_4.png" alt="">
-                                <img src="./img/skill_5.png" alt="">
-                                <img src="./img/skill_6.png" alt="">
-                                <img src="./img/skill_7.png" alt="">
-                                <img src="./img/skill_8.png" alt="">
-                            </div>
+                    <div class="con_box birth_box">
+                        <h2 class="top_text">ABOUT ME</h2>
+                        <P>1994. 11. 11(+)</P>
+                        <P>seon.xero@gmail.com</P>
+                    </div>
+                    <div class="con_box certi_box">
+                        <h2 class="top_text">CERTIFICATE</h2>
+                        <p>웹디자인기능사</p>
+                        <p>컴퓨터그래픽스운용기능사</p>
+                        <p>컴퓨터활용능력 1급</p>
+                        <p>자동차운전면허 2종보통</p>
+                    </div>
+                    <div class="con_box skill_box">
+                        <h2 class="top_text">SKILL</h2>
+                        <div class="skill_img">
+                            <img src="./img/skill_1.png" alt="">
+                            <img src="./img/skill_2.png" alt="">
+                            <img src="./img/skill_3.png" alt="">
+                            <img src="./img/skill_4.png" alt="">
+                            <img src="./img/skill_5.png" alt="">
+                            <img src="./img/skill_6.png" alt="">
+                            <img src="./img/skill_7.png" alt="">
+                            <img src="./img/skill_8.png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="page page_2">
-                <div class="swiper_wrap">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <h2 class="hide_con pj_text">어린이급식관리지원센터<br>
-                                    <p> 개인 프로젝트</p>
-                                </h2>
-                                <img src="./img/a1b.png" alt="">
-                                <p class="hide_con pj_con">건강한 급식, 밝은 미래 어린이 사회복지급식관리지원센터가 함께합니다. 
-                                    반응형 레이아웃 작업을 통해 사용자 편의성을 높이고자 함</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <h2 class="hide_con pj_text">HEINEKEN : 맥주<br>
-                                    <p> 팀 프로젝트</p>
-                                </h2>
-                                <img src="./img/a2b.png" alt="">                                
-                                <p class="hide_con pj_con">오랜 시간 사랑받고 있는 하이네켄의 이야기를 다양하게 표현하고자 함</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <h2 class="hide_con pj_text">해피콜 : 주방가전<br>
-                                    <p>  개인 프로젝트</p>
-                                </h2>
-                                <img src="./img/a3b.png" alt="">
-                                <p class="hide_con pj_con">주방제품 중저가 라인 중 대표적인 해피콜, 가격만이 장점이 아닌 품질의 우수성을 알리고자 홈페이지 리뉴얼을 도전함</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <h2 class="hide_con pj_text"> JEEP : 자동차<br>
-                                    <p> 개인 프로젝트</p>
-                                </h2>
-                                <img src="./img/a4b.png" alt="">
-                                <p class="hide_con pj_con">최근 오프로드 뿐만 아닌 온로드에서도 더욱 빛을 보이는 JEEP, 현재의 JEEP를 이야기하고 JEEP의 이미지를 새롭게 심어주고자 함</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <h2 class="hide_con pj_text"> ASUS : 노트북<br>
-                                    <p> 개인 프로젝트</p>
-                                </h2>
-                                <img src="./img/a5b.png" alt="">
-                                <p class="hide_con pj_con">새로운 AI 경험, 젠북으로부터 퍼포먼스, LIFE, STYLE, 극강의 AI 퍼포먼스. 가족을 위해 모두를 위해 SUPER VIVOBOOK S14 OLED</p>
-                            </div>
-                        </div> 
-                        <div class="swiper-pagination"></div>
-                        <!--tab/mobile button과 연결-->
-                        <input class="swiper-button-next" name="tab" id="next_tab">
-                        <input class="swiper-button-prev" name="tab" id="pre_tab">
-                    </div>
-                    <div class="hide_con swiper_button">
-                        <label for="pre_tab" class="left_but but_con">
-                            <img src="./img/left.png" alt="">
-                        </label>
-                        <div class="pause_but but_con">
-                            <img src="./img/pause.png" alt="">
+        </div>
+        <div class="page page_2">
+            <div class="in_page swiper_wrap">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h2 class="hide_pc pj_text">어린이급식센터<br>
+                                <p> 개인 프로젝트</p>
+                            </h2>
+                            <img src="./img/pro1.png" alt="">
+                            <p class="hide_pc pj_con">건강한 급식, 밝은 미래 어린이 사회복지급식관리지원센터가 함께합니다. 
+                                반응형 레이아웃 작업을 통해 사용자 편의성을 높이고자 함</p>
                         </div>
-                        <label for="next_tab" class="right_but but_con">
-                            <img src="./img/right.png" alt="">
-                        </label>
+                        <div class="swiper-slide">
+                            <h2 class="hide_pc pj_text">HEINEKEN : 맥주<br>
+                                <p> 팀 프로젝트</p>
+                            </h2>
+                            <img src="./img/pro2.png" alt="">                                
+                            <p class="hide_pc pj_con">오랜 시간 사랑받고 있는 하이네켄의 이야기를 다양하게 표현하고자 함</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2 class="hide_pc pj_text">해피콜 : 주방가전<br>
+                                <p>  개인 프로젝트</p>
+                            </h2>
+                            <img src="./img/pro3.png" alt="">
+                            <p class="hide_pc pj_con">주방제품 중저가 라인 중 대표적인 해피콜, 가격만이 장점이 아닌 품질의 우수성을 알리고자 홈페이지 리뉴얼을 도전함</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2 class="hide_pc pj_text"> JEEP : 자동차<br>
+                                <p> 개인 프로젝트</p>
+                            </h2>
+                            <img src="./img/pro4.png" alt="">
+                            <p class="hide_pc pj_con">온로드에서도 더욱 빛을 보이는 JEEP, 현재의 JEEP를 이야기하고 JEEP의 이미지를 새롭게 심어주고자 함</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2 class="hide_pc pj_text"> ASUS : 노트북<br>
+                                <p> 개인 프로젝트</p>
+                            </h2>
+                            <img src="./img/pro5.png" alt="">
+                            <p class="hide_pc pj_con">새로운 AI 경험, 젠북으로부터 퍼포먼스, LIFE, STYLE, 극강의 AI 퍼포먼스. 가족을 위해 모두를 위해 SUPER VIVOBOOK S14 OLED</p>
+                        </div>
+                    </div> 
+                    <div class="swiper-pagination"></div>
+                    <!--tab/mobile button과 연결-->
+                    <input class="swiper-button-next" name="tab" id="next_tab">
+                    <input class="swiper-button-prev" name="tab" id="pre_tab">
+                </div>
+                <div class="hide_pc swiper_button">
+                    <label for="pre_tab" class="left_but but_con">
+                        <img src="./img/but_left.png" alt="">
+                    </label>
+                    <div class="pause_but but_con">
+                        <img src="./img/but_pause.png" alt="">
                     </div>
+                    <label for="next_tab" class="right_but but_con">
+                        <img src="./img/but_right.png" alt="">
+                    </label>
                 </div>
             </div>
-            <div class="page page_3 top_page">
-                <div class="contact_box">
-                    <div class="close_but">CLOSE</div>
-                    <h1 class="point_text">CONTACT</h1>
-                    <div class="call_box">
-                        <div class="email_con">
-                            <a href="https://www.google.co.kr/?hl=ko" target="_blank">
-                            <img class="contact_icon" src="./img/contact11.png" alt=""></a>
-                            <p>MAIL</p>
-                        </div>
-                        <div class="kakao_con">
-                            <a href="https://open.kakao.com/o/slUtBikg" target="_blank">
-                            <img class="contact_icon" src="./img/contact22.png" alt=""></a>
-                            <p>KAKAOTALK</p>
-                        </div>
-                        <div class="tstory">
-                            <a href="https://seon-xero.tistory.com/" target="_blank">
-                            <img class="contact_icon" src="./img/contact33.png" alt=""></a>
-                            <p>BLOG</p>
-                        </div>
-                        <div class="project_pdf">
-                            <a href="" target="_blank">
-                            <img class="contact_icon" src="./img/contact44.png" alt=""></a>
-                            <p>PROJECT</p>
-                        </div>
+        </div>
+        <div class="page page_3">                
+            <div class="in_page contact_box">
+                <div class="close_but">CLOSE</div>
+                <h1 class="point_text">CONTACT</h1>
+                <div class="call_box">
+                    <div class="email_con">
+                        <a href="https://www.google.co.kr/?hl=ko" target="_blank">
+                        <img class="contact_icon" src="./img/contact1.png" alt=""></a>
+                        <p>MAIL</p>
+                    </div>
+                    <div class="kakao_con">
+                        <a href="https://open.kakao.com/o/slUtBikg" target="_blank">
+                        <img class="contact_icon" src="./img/contact2.png" alt=""></a>
+                        <p>KAKAOTALK</p>
+                    </div>
+                    <div class="tstory">
+                        <a href="https://seon-xero.tistory.com/" target="_blank">
+                        <img class="contact_icon" src="./img/contact3.png" alt=""></a>
+                        <p>BLOG</p>
+                    </div>
+                    <div class="project_pdf">
+                        <a href="" target="_blank">
+                        <img class="contact_icon" src="./img/contact4.png" alt=""></a>
+                        <p>PROJECT</p>
                     </div>
                 </div>
-                <div class="copyright_box">
-                    COPYRIGHT 2024ⓒ by 박선영<br>ALL RIGHTS RESERVED.<br>
+                <div class="hide_pc copyright_box">
+                    COPYRIGHT 2024ⓒ by 박선영<br>ALL RIGHTS RESERVED<br>
                     본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 제작되었습니다.
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        
+        //미디어쿼리정의
+        let mediaPC=matchMedia('(min-width:1024px)')
+        let mediaTAB=matchMedia('(max-width:1023px) and (min-width:768px)');
+        let mediaMO=matchMedia('(max-width:767px)');
+        let swiper;    
+        let autoplayState = true; //autoplay 상태확인
 
-
-   <script>
-    
-    let swiper;    
-    let autoplayState = true; //autoplay 상태확인
-
-    ww=$(window).innerWidth();
-    //swiper함수 : PC에서만 적용
+        ww=$(window).innerWidth();
+        //swiper함수 : PC에서만 적용
         function PCswipe(){
-            if (ww>=1024){
+            if(ww>=1024){
                 if (swiper) {
-                swiper.destroy(); // 이전 인스턴스 파괴
+                    swiper.destroy(); // 이전 swiper 제거
                 }
-            swiper = new Swiper(".mySwiper", {
-                slidesPerView: 4,
-                spaceBetween: 5,
-                // freeMode: true, //슬라이드 스와이프 
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true
-                },
-                autoplay:{
-                    delay:4000,
-                    disableOnInteraction: false
-                },
-                speed: 4000,
-                loop: true,
+                swiper = new Swiper(".mySwiper", {
+                    slidesPerView: 4,
+                    spaceBetween: 5,
+                    loop: true,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true
+                    },
+                    autoplay:{
+                        delay:0,
+                        disableOnInteraction: false
+                    },
+                    speed: 4000,
                 });
             };
         };
-    //swiper함수 : TAB과 모바일에서 적용   
+        //swiper함수 : TAB과 모바일에서 적용   
         function TABswipe(){
             if(ww<1024){
                 if (swiper) {
-                swiper.destroy(); // 이전 인스턴스 파괴
+                    swiper.destroy(); // 이전 swiper 제거
                 }
-            swiper = new Swiper(".mySwiper", {
-                slidesPerView: 1,
-                loop: true,
-                speed: 4000,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },  
-                autoplay:{
-                    delay:4000,
-                    disableOnInteraction: false
-                },
-                allowTouchMove : false, //버튼 클릭을 통한 swipe가능
+                swiper = new Swiper(".mySwiper", {
+                    slidesPerView: 1,
+                    loop: true,
+                    speed: 4000,
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },  
+                    autoplay:{
+                        delay:4000,
+                        disableOnInteraction: false
+                    },
+                    allowTouchMove : false, //이미지 swipe 기능 비활성화
                 });
             };
         };
-
-    // pause_but 클릭 시 자동 재생 중지
-    const pause_but=document.querySelector('.pause_but')
-    const pause_img = document.querySelector('.pause_but>img');
-    pause_but.addEventListener('click',function(){
-        if (swiper) {
-        if (autoplayState) { //autoplay 재생중
-            swiper.autoplay.stop();
-            autoplayState=false;
-            pause_img.setAttribute('src',"./img/play.png");
-        }else{
-            swiper.autoplay.start(); //autoplay 정지
-            autoplayState = true;
-            pause_img.setAttribute('src',"./img/pause.png"); 
-        }
-    }
-    })
-
-    //미디어쿼리정의
-    let mediaPC=matchMedia('(min-width:1024px)')
-    let mediaTAB=matchMedia('(max-width:1023px) and (min-width:768px)');
-    let mediaMO=matchMedia('(max-width:767px)');
     
-    //resize함수
-    function resizeMedia(){
-        ww=$(window).innerWidth();
-        if(mediaPC.matches){
-            PCswipe();
-        }else{
-            TABswipe();
+        //-----pause_but 클릭 시 자동 재생 중지
+        const pause_but=document.querySelector('.pause_but')
+        const pause_img=document.querySelector('.pause_but>img');
+        pause_but.addEventListener('click',function(){
+            if(swiper){
+                if(autoplayState){ //autoplay 재생중
+                    swiper.autoplay.stop(); //autoplay 재생▶정지
+                    autoplayState=false;
+                    pause_img.setAttribute('src',"./img/but_play.png");
+                }else{
+                    swiper.autoplay.start(); //autoplay 정지▶재생
+                    autoplayState = true;
+                    pause_img.setAttribute('src',"./img/but_pause.png"); 
+                }
         }
-    }
-    resizeMedia();
-    window.addEventListener('resize',resizeMedia);
-
+        })
+        
+        //-----resize시 swipe 함수 호출
+        resizeMedia();
+        function resizeMedia(){
+            ww=$(window).innerWidth();
+            if(mediaPC.matches){
+                PCswipe();
+            }else{
+                TABswipe();
+            }
+        }
+        window.addEventListener('resize',resizeMedia);
     </script>
 </body>
 </html>

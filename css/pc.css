@@ -1,0 +1,112 @@
+@media all and (min-width:1024px){
+
+/*-----pc 기본폰트 사이즈 16px -----*/
+html,body{
+    font-size: 16px;
+}
+/*-----scroll-bar none-----*/
+/* .invisible-scrollbar::-webkit-scrollbar {
+    display: none;
+} */
+body{
+    overflow-y: hidden;
+}
+.info_1{
+    display: block;
+}
+.pc_button{
+    position: fixed;
+    /*위치값 js에서 설정*/
+    z-index: 9999;
+}
+.pc_but>img{
+    transform: scale(0.65);
+}
+.pc_but{
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.pc_text{
+    transition: 0.4s;
+}
+.con_wrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.con_box{
+    float: left;
+}
+.skill_img{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skill_img>img{
+    width: 4vw;
+    height: 4vw;
+}
+.swiper-slide img{
+    transition: 0.5s;
+    cursor: url(../img/cursor_click.png)1 8,auto;
+}
+.swiper-slide img:hover{
+    transform: scale(1.1);
+}
+.swiper-wrapper{
+    transition-timing-function: linear; /*자연스럽게 slide효과*/
+}
+.hide_pc{
+    display: none;
+}
+.contact_box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border:5px solid transparent;
+    border-radius: 40px;
+    background-image:linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), linear-gradient(-45deg,#dd5875,#f39b00,#75bd4d,#059ee2);
+    background-origin:border-box;
+    background-clip:padding-box, border-box;
+}  
+.page_3{
+    background-color: rgba(0,0,0, 0.8);
+}  
+.close_but{
+    width: 70px;
+    height: 30px;
+    border-radius: 15px;
+    color:#fff;
+    background-color: #33333365;
+    position: absolute;
+    top:25px;
+    right:25px;
+    font-size: 0.9rem;
+    line-height: 30px;
+    cursor: pointer
+}
+.close_but:hover{
+    background-image: linear-gradient(-45deg,#dd5875,#f39b00,#75bd4d,#059ee2);
+}
+.call_box{  
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.call_box>div{
+    height: 100%;
+    padding: 1%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.call_box a{
+    width: 100%;
+    height: 70%;
+}
+}

@@ -1,0 +1,73 @@
+@media all and (max-width:767px){
+/*-----tab 기본폰트 사이즈 12px -----*/
+html,body{
+    font-size: 12px;
+}
+.info_3{
+    display: block;
+}
+.con_box{
+    float: left;
+}
+.tm_button{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    z-index: 99999;
+    background-color: #fff;
+    box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.tm_but>img{
+    transform: scale(0.7);
+}
+.skill_img{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.skill_img>img{
+    width: 14vw;
+    height: 14vw;
+    margin:0;
+    margin-top: 10px;
+}
+.swiper-pagination{
+    display: none;
+}
+.hide_pc{
+    display: block;
+} 
+.pj_text{
+    font-size: 2rem;
+    text-align: center;
+}
+.pj_text>p{
+    font-size: 1.5rem;
+}
+.pj_con{
+    font-size: 1.5rem;
+    word-break: keep-all;
+    text-align: center;
+}
+/*----------(C)page_3 : contact 영역*/
+.close_but{
+    display: none;
+}
+.contact_box .point_text{
+    font-size: 4rem
+}
+.call_box{  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+.call_box img{
+    margin: 5% 0;
+    width: 95%;
+    height: 70%;
+}
+}
