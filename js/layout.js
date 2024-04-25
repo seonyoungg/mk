@@ -52,6 +52,13 @@ $(document).ready(function(){
         $('.run_wrap').css({
             position: 'absolute',
             top: 0
+        })        
+        //인페이지 공통 처리//
+        $('.in_page').css({
+            width: 0.8*ww,
+            overflow: 'hidden',
+            position: 'relative',
+            margin: '0 auto'
         })
         //-----2.main_page-----//
         $('.main_page').css({
@@ -91,7 +98,7 @@ $(document).ready(function(){
             height: wh,
             position: 'relative',
             boxSizing: 'border-box',
-            // paddingTop: 0.1*wh
+            padding:0
         })
         //----------(A)page_1 : 자기소개 영역
         $('.left_con img').css({
@@ -139,7 +146,7 @@ $(document).ready(function(){
         }) 
         $('.swiper-slide>img').css({
             objectFit: 'contain'
-        }) //크기값찾자
+        }) 
         $('.swiper-slide').css({
             width: '100%',
             height: '100%'
@@ -178,19 +185,17 @@ $(document).ready(function(){
             width: 0.09*ww,
             height:0.07*wh,
             lineHeight: 0.07*wh+'px',
-            fontSize: 0.013*ww
-        })
-        //인페이지 공통 처리//
-        $('.in_page').css({
-            width: 0.8*ww,
-            height: 0.8*wh,
-            position: 'relative',
-            margin: '0 auto',
-            top: 'calc( 50% - ' + 0.4*wh + 'px)'
+            borderRadius:'50px',
+            fontSize: 0.015*ww
         })
         $('.main_text').css({
             width: 0.8*ww,
             marginBottom: 0.03*wh
+        })        
+        main_IH=$('.main_page>.in_page').height();
+        console.log(main_IH);
+        $('.main_page>.in_page').css({
+            top: 'calc( 50% - ' + main_IH/2 + 'px)'
         })
         //-----3.page_wrap-----//
         //1) 메뉴박스(button)
@@ -244,8 +249,8 @@ $(document).ready(function(){
 
         //2) page영역
         //----------(A)page_1 : 자기소개 영역
-        con_ww=$('.con_wrap').width();
-        con_wh=$('.con_wrap').height();
+        con_ww=0.8*ww
+        con_wh=0.8*wh
         $('.left_con').css({
             width: 0.3*con_ww,
             height:0.8*con_wh
@@ -256,23 +261,21 @@ $(document).ready(function(){
         })
         $('.right_con').css({
             width: 0.6*con_ww,
-            height:0.8*con_wh
+            overflow: 'hidden'
         })
         $('.con_box').css({
             paddingLeft: 0.02*ww
         })
         //con_box(1):이름
         r_ww=$('.right_con').width();
-        r_wh=$('.right_con').height();
         $('.name_box>.point_text').css({
             textAlign: 'start'
         })           
         $('.name_box').css({
             width: r_ww,
-            height: 0.25*r_wh,
-            lineHeight: 0.25*r_wh+'px',
-            marginTop: 0.1*r_wh,
-            marginBottom: 0.04*r_wh,
+            overflow: 'hidden',
+            marginTop: 0.1*con_wh,
+            marginBottom: 0.04*con_wh,
         })
         $('.name_box p,.top_text').css({
             fontSize: '1.5rem'
@@ -297,18 +300,26 @@ $(document).ready(function(){
         //con_box(2-3):생년월일, 자격증
         $('.birth_box,.certi_box').css({
             width: 0.5*r_ww,
-            height: 0.3*r_wh,
+            overflow: 'hidden',
             margin: 0
         })        
         //con_box(4):기술
         $('.skill_box').css({
             width: r_ww,
-            height: 0.25*r_wh,
+            overflow: 'hidden',
+            //
+            marginTop: 0.04*con_wh,
             paddingRight: 0.02*ww 
             //(전체)con_box에 boxsizing적용 및 padding=0
         })
         $('.skill_img').css({
             paddingLeft: 0.015*ww
+        })
+        main_1H=$('.page_1>.in_page').height();        
+        console.log('main_1H');
+        console.log(main_1H);
+        $('.page_1>.in_page').css({
+            top: 'calc( 50% - ' + main_1H/2 + 'px)'
         })
 
         //----------(B)page_2 : 프로젝트 영역 
@@ -320,16 +331,20 @@ $(document).ready(function(){
             height: '100%',
             margin: 0
         })
-        $('.swiper_wrap').css({
-            paddingTop: 0.1*wh,
-            boxSizing: 'border-box'
-        })
         let swiperPC=["./img/pro1.png","./img/pro2.png","./img/pro3.png","./img/pro4.png","./img/pro5.png"]
         $('.swiper-slide img').attr({
             src: function(abc){
                 return swiperPC[abc]
             }
             })     
+        
+        main_2H=$('.page_2>.in_page').height();
+        console.log('main_2H');
+        console.log(main_2H);
+        $('.page_2>.in_page').css({
+            top: 'calc( 50% - ' + main_2H/2 + 'px)'
+        })
+        
         //----------(C)page_3 : contact 
         $('.page_3').css({
             // display: 'none',
@@ -337,7 +352,8 @@ $(document).ready(function(){
         })         
         $('.contact_box').css({
             width: 0.5*ww,
-            height: 0.4*wh,
+            // height: 0.4*wh,
+            overflow: 'hidden',
             top: 'calc( 50% - ' + 0.2*wh + 'px)',
             paddingTop:0.06*wh,
             paddingBottom:0.06*wh,
@@ -345,13 +361,15 @@ $(document).ready(function(){
         })
         $('.contact_box>.point_text').css({
             width: 0.4*ww,
-            height: 0.08*wh,
-            lineHeight: 0.08*wh+'px',
-            margin: '0 auto'
+            // height: 0.08*wh,
+            // lineHeight: 0.08*wh+'px',
+            margin: '0 auto',
+            marginBottom: '30px'
         })
         $('.call_box').css({  
             width: 0.4*ww,
-            height: 0.2*wh,
+            // height: 0.2*wh,
+            overflow: 'hidden',
             margin: '0 auto'
         })
         contact_ww=$('.contact_box').width();
@@ -362,6 +380,12 @@ $(document).ready(function(){
         $('.hide_pc').css({
             display: 'none'
         })
+
+        main_2H=$('.page_2>.in_page').height();
+        $('.page_2>.in_page').css({
+            top: 'calc( 50% - ' + main_2H/2 + 'px)'
+        })
+        
     };
 
     //TAB&MOBILE 영역
@@ -376,13 +400,7 @@ $(document).ready(function(){
         $('.run_wrap').css({
             display: 'none'
         })
-        //-----2.main_page-----//       
-        $('.in_page,.main_page>.in_page').css({
-            width: 0.8*ww,
-            overflow: 'hidden',
-            position: 'relative',
-            margin: '0 auto'
-        })    
+        //-----2.main_page-----//        
         $('.main_text').css({
             width: 0.7*ww,
             marginBottom: 0.015*wh,
@@ -393,10 +411,8 @@ $(document).ready(function(){
             lineHeight: 0.05*wh+'px',
             fontSize: 0.03*ww
         })
-        main_IH=$('.main_page>.in_page').height();
-        console.log(main_IH);
-        $('.main_page>.in_page').css({
-            top: 'calc( 50% - ' + main_IH/2 + 'px)'
+        $('.page').css({
+            paddingBottom: 0.1*wh
         })
         //-----3.page_wrap-----//
         //1) 메뉴박스(button)
@@ -406,9 +422,11 @@ $(document).ready(function(){
         $('.tm_button').css({
         // position: 'fixed' (css bottom:0 left:0)
             width: ww,
+            height: 0.1*wh,
             display: 'block',
             paddingLeft: 0.1*ww,
             paddingRight: 0.1*ww,
+            // paddingTop: '5%',
             boxSizing: 'border-box'
         })
         $('.tm_but').css({
@@ -426,11 +444,11 @@ $(document).ready(function(){
         con_wh=0.8*wh
         $('.left_con').css({
             width: con_ww,
-            height:0.5*con_wh
+            height:0.4*con_wh
         })
         $('.left_con img').css({
             width: con_ww,
-            height:0.5*con_wh
+            height:0.4*con_wh
         })
         $('.right_con').css({
             width: con_ww,
@@ -489,7 +507,6 @@ $(document).ready(function(){
             paddingLeft: '15px',
             boxSizing: 'border-box'
         })
-
         //----------(B)page_2 : 프로젝트 영역    
         $('.swiper').css({
             overflow: 'hidden',
@@ -497,7 +514,13 @@ $(document).ready(function(){
         }) 
         $('.pj_text').css({
             width: '100%',
-            overflow: 'hidden'
+            overflow: 'hidden',
+            margin: 0
+        })        
+        $('.pj_con').css({
+            width: '90%',
+            overflow: 'hidden',
+            margin: '0 auto'
         })
         $('.swiper-slide>img').css({
             width: '90%',
@@ -526,7 +549,7 @@ $(document).ready(function(){
         $('.call_box').css({
             width: 0.8*ww,
             overflow: 'hidden',
-            margin: 0
+            margin: '0 auto'
         })
         call_ww=$('.call_box').width()
         $('.call_box>div').css({
@@ -549,29 +572,34 @@ $(document).ready(function(){
         ww=$(window).innerWidth();
         wh=ww*1.5
         $('.tm_button').css({
-            height: 0.08*wh,
-            paddingTop: '3%'
+            paddingTop: '2.5%'
         })
-        
-        $('.main_page>img').css({
-            height: 0.3*wh,
+        $('.main_page img').css({
+            height: 0.4*wh,
         })        
-
+        main_IH=$('.main_page>.in_page').height();
+        $('.main_page>.in_page').css({
+            top: 'calc( 50% - ' + main_IH/2 + 'px)'
+        })
         //----------(A)page_1 : 자기소개 영역  
         $('.skill_img').css({
             padding: 0
         }) 
         main_1H=$('.page_1>.in_page').height();
-        console.log(main_1H);
         $('.page_1>.in_page').css({
             top: 'calc( 50% - ' + main_1H/2 + 'px)'
         })
-
         //----------(B)page_2 : 프로젝트영역  
+        $('.pj_text').css({
+            width: '100%',
+            overflow: 'hidden',
+            marginBottom: '30px'
+        })        
         $('.pj_con').css({
             width: '90%',
             overflow: 'hidden',
-            margin: '0 auto'
+            margin: '0 auto',            
+            marginTop: '30px'
         })
         $('.swiper_button').css({
             width: '70%',
@@ -610,30 +638,27 @@ $(document).ready(function(){
         ww=$(window).innerWidth();
         wh=ww*2
         $('.tm_button').css({
-            height: 0.1*wh,
-            paddingTop: '5%'
+            paddingTop: '5%' 
         })
-        
-        $('.main_page>img').css({
-            height: 0.2*wh,
-        })        
+        $('.main_page img').css({
+            height: 0.3*wh,
+        })           
+        main_IH=$('.main_page>.in_page').height();
+        console.log(main_IH);
+        $('.main_page>.in_page').css({
+            top: 'calc( 50% - ' + main_IH/2 + 'px)'
+        })     
         //----------(A)page_1 : 자기소개 영역  
         $('.skill_img').css({
             padding: '0 10%'
         }) 
         main_1H=$('.page_1>.in_page').height();        
-        console.log('main_1H');
-        console.log(main_1H);
+        // console.log('main_1H');
+        // console.log(main_1H);
         $('.page_1>.in_page').css({
             top: 'calc( 50% - ' + main_1H/2 + 'px)'
         })
-
         //----------(B)page_2 : 프로젝트영역   
-        $('.pj_con').css({
-            width: '100%',
-            overflow: 'hidden',
-            margin: 0
-        })
         $('.swiper_button').css({
             width: '90%',
             margin: '0 auto',
@@ -653,16 +678,16 @@ $(document).ready(function(){
             marginRight: button_ww*0.05
         })
         main_2H=$('.page_2>.in_page').height();
-        console.log('main_2H');
-        console.log(main_2H);
+        // console.log('main_2H');
+        // console.log(main_2H);
         $('.page_2>.in_page').css({
             top: 'calc( 50% - ' + main_2H/2 + 'px)'
         })
         
         //----------(C)page_3 : CONTACT  
         main_3H=$('.page_3>.in_page').height();
-        console.log('main_3H');        
-        console.log(main_3H);
+        // console.log('main_3H');        
+        // console.log(main_3H);
         $('.page_3>.in_page').css({
             top: 'calc( 50% - ' + main_3H/2 + 'px)'
         })

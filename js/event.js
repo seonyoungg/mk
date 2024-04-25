@@ -142,9 +142,11 @@ $(document).ready(function(){
                 marginTop:0
             })
             //main_page 연결
-            $('.main_page').fadeIn(2000,function(){
-                $('html,body').scrollTop(0);
-            });
+            // $('.main_page').fadeIn(2000,function(){
+            //     $('html,body').scrollTop(0);
+            // });
+            $('.main_page').fadeIn(2000);
+            $('html,body').scrollTop(0);
             //pc_but 초기화
             pcBut(0);
         }
@@ -163,10 +165,11 @@ $(document).ready(function(){
                 scrollTop: wh*tmIndex
             },1000);
         }else if(tmIndex==3){
-            $('.main_page').fadeIn(2000,function(){
-                $('html,body').scrollTop(0);    
-            });
-            // $('html,body').scrollTop(0);
+            // $('.main_page').fadeIn(2000,function(){
+            //     $('html,body').scrollTop(0);    
+            // });
+            $('.main_page').fadeIn(2000);
+            $('html,body').scrollTop(0);
         }
     })
 
